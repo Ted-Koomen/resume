@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Nav from "./Nav";
+import { Helmet } from "react-helmet"
+import { NavBar } from "../index";
 import "./layout.scss";
-
 const Layout = ({ children }) => (
   <div className="layout">
-    <Nav />
+    <Helmet>
+    <script src="https://use.fontawesome.com/e3ddeb66f1.js"/>
+    </Helmet>
+    <NavBar />
     <main className="main">{ children }</main>
   </div>
 )

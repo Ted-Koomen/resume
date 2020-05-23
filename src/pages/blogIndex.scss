@@ -1,0 +1,28 @@
+body {
+  background: #f5f5f5;
+}
+
+#nav {
+  background-color: white;
+  .navbar-brand {
+    color: lightskyblue;
+  }
+  .btn-outline {
+    color: lightskyblue;
+
+    &:hover {
+      color: blueviolet;
+    }
+
+  }
+
+  .nav {
+    .nav-element {
+      color: lightskyblue;
+      
+      &:hover {
+        color: blueviolet;
+      }
+    }
+  }
+}

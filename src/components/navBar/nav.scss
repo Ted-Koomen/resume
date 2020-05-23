@@ -20,4 +20,20 @@
       }
     }
   }
+
+  .container {
+    #nav-link-container {
+      display: flex;
+      flex-direction: row;
+      .nav-link-element {
+        margin-left: 10px
+      }
+    }
+  }
+  .scroll-link {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
 }
