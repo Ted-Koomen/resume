@@ -18,7 +18,7 @@ const Image = ({ src }) => {
     query {
       placeholderImage: file(relativePath: { eq: "blog-banner.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 3200) {
+          fluid(maxHeight:  3200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -27,16 +27,18 @@ const Image = ({ src }) => {
   `)
 
   return (
-    <Img
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        color: " black",
-        marginLeft: "auto",
-        marginRight: "auto"
-      }}
-      fluid={data.placeholderImage.childImageSharp.fluid}
-    />
+   <header style={{minHeight: '554px'}}>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="intro-text">
+              <span className="name">Ted Koomen</span>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   )
 }
 

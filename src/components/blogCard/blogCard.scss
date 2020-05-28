@@ -1,0 +1,39 @@
+
+.blog-card-container {
+  margin-top: -34px;
+  display: flex;
+  a {
+    color: #455065
+  }
+  .blog-card {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
+    background: #F5F6F6;
+    width: 30%;
+    min-height: 173px;
+    color: #455065;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 25px;
+
+    &:hover {
+      background-color: white;
+      color: lightskyblue;
+      box-shadow: 2px, 2px,2px, 2px rgba(0,0,0,.25) ease-in-out;
+      cursor: pointer;
+    }
+
+    .card-icon {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 28px;
+    }
+    .card-excerpt {
+      font-size: 14px;
+    }
+    .card-cta {
+      margin-top: auto;
+    }
+  }
+}

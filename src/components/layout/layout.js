@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet"
 import { NavBar } from "../index";
 import "./layout.scss";
+import '../../fonts/fonts.css';
+
 const Layout = ({ children }) => (
   <div className="layout">
     <Helmet>

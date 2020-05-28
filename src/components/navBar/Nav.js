@@ -38,7 +38,11 @@ const Nav = () => (
             className="nav-element scroll-link navbar-brand"
             style={{ fontSize: "2.2em" }}
             >
+            <Link 
+              to="/"
+            >
             Ted Koomen
+            </Link>
           </Scroll.Link>
         <div className="social-container">{renderSocials()}</div>
       </div>
