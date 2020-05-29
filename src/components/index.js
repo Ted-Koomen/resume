@@ -6,5 +6,6 @@ import NavBar from "./navBar"
 import BlogBanner from './blogBanner';
 import BlogCard from './blogCard';
 import Spacer from './spacer'
+import Footer from './footer'
 
-export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, Spacer, BlogCard }
+export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, Spacer, BlogCard, Footer }

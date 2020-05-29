@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet"
-import { NavBar } from "../index";
+import { NavBar, Footer } from "../index";
 import "./layout.scss";
 import '../../fonts/fonts.css';
 
@@ -13,6 +13,7 @@ const Layout = ({ children }) => (
     </Helmet>
     <NavBar />
     <main className="main">{ children }</main>
+    <Footer />
   </div>
 )
 
