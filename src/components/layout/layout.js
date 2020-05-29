@@ -5,6 +5,7 @@ import { NavBar } from "../index";
 import "./layout.scss";
 import '../../fonts/fonts.css';
 
+
 const Layout = ({ children }) => (
   <div className="layout">
     <Helmet>

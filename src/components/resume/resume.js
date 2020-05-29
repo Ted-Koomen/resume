@@ -61,7 +61,7 @@ const Resume = () => {
 
   return (
     <div id="resume">
-      {resumeData.map(data => <ResumeComponent {...data} />)}
+      {resumeData.map(data => <ResumeComponent {...data} key={data.company}/>)}
     </div>
   )
 }

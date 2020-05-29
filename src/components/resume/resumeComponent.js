@@ -14,7 +14,7 @@ const ResumeComponent = ({ company, role, contributions, technologies }) => {
         <div className="contributions">
           <ul>
             {contributions.map(contribution => (
-              <li>{contribution}</li>
+              <li key={contribution}>{contribution}</li>
             ))}
           </ul>
         </div>
@@ -22,9 +22,8 @@ const ResumeComponent = ({ company, role, contributions, technologies }) => {
 
       <div 
         className="col-sm-6" style={{marginTop: '50px'}}>
-
         <div className="company-role">
-          {technologies.map(Tech => <Tech style={{height: '100px', width: '100px'}} />)}
+          {technologies.map(Tech => <Tech style={{height: '100px', width: '100px', color: "lightskyblue"}}  />)}
         </div>
       </div>
     </div>

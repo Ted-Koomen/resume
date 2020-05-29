@@ -5,5 +5,6 @@ import Layout from './layout'
 import NavBar from "./navBar"
 import BlogBanner from './blogBanner';
 import BlogCard from './blogCard';
+import Spacer from './spacer'
 
-export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, BlogCard }
+export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, Spacer, BlogCard }

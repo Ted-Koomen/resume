@@ -1,6 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
-import { AboutMe, Hero, ResumeContainer, Layout } from "../components"
+import { AboutMe, Hero, ResumeContainer, Layout, Spacer } from "../components"
 
 import "./index.scss"
 
@@ -8,6 +7,7 @@ const IndexPage = () => (
   <Layout>
     <Hero />
     <AboutMe />
+    <Spacer backgroundColor="#2196F3" spacerText="Look at this text"/>
     <ResumeContainer />
   </Layout>
 )

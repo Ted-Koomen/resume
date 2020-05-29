@@ -5,12 +5,12 @@ import "./blogIndex.scss"
 const blogInfo = [
   {
     headerIcon: "fa fa-code",
-    title: "Engineering Tutorials",
+    title: "Engineering",
     body: "Developer tutorials and that I am personally intersted in. This includes JavaSript, Elixir, and React.",
   },
   {
-    headerIcon: "fa fa-rss",
-    title: "Engineering News",
+    headerIcon: "fa fa-briefcase",
+    title: "Career",
     body: "News about new"
   },
   {
@@ -25,7 +25,7 @@ const Blog = () => (
     <BlogBanner />
     <div className="container blog-card-container">
       {blogInfo.map(blogObject => (
-        <BlogCard {...blogObject} />
+        <BlogCard {...blogObject} path="blog/engineering" />
       ))}
     </div>
   </Layout>

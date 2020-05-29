@@ -1,9 +1,11 @@
 ---
-path: '/my-first-blog'
-date: '2020-01-01'
-title: 'My First Blog'
-author: 'Emma Bostian'
+path: '/blog/engineering/create-gatsby-blog'
+date: '2020-05-28'
+title: 'Gatsby Starter'
+author: 'Ted Koomen'
 description: 'This is my very first blog of 2020!'
+posttype: "engineering"
+tags: ["javascript", "gatsby", "react"]
 ---
 
 Here is my main content

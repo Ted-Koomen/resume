@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,7 +13,7 @@ import Img from "gatsby-image"
  */
 
 const Image = ({ src }) => {
-  const data = useStaticQuery(graphql`
+  useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "blog-banner.webp" }) {
         childImageSharp {
