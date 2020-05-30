@@ -8,6 +8,7 @@ posttype: "engineering"
 tags: ["javascript", "gatsby", "react"]
 image: '../../images/gatsby-astronaut.png'
 featured: true
+test: false
 ---
 
 [The Creators](https://www.gatsbyjs.org/) of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps". So what does that even mean? It seems as though every framework or library claims to be blazing fast and scalable. What Gatsby is, is a *Static Site Generator*. Great, so what is that?
