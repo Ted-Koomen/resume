@@ -14,7 +14,6 @@ export default ({ data }) => {
     image,
   } = data.markdownRemark.frontmatter
   const post = data.markdownRemark
-  console.log(image)
   return (
     <Layout>
       <SEO title={title} description={description} image={image}/>

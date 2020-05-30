@@ -14,7 +14,6 @@ export default ({ data }) => {
       {
        posts.map(post => {
          const {date, path, author, title, posttype, description } = post.node.frontmatter
-         console.log("DESCRIPTION: ", description)
          return (
            <>
 
