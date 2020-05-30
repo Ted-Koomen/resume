@@ -66,7 +66,7 @@ class Nav extends React.Component {
       <Element id="top" name="top">
         <nav
           id="nav"
-          className="navbar navbar-default navbar-fixed-top fixed-top"
+          className={`navbar navbar-default navbar-fixed-top fixed-top ${this.setDropshadow()}`}
           role="navigation"
         >
           <div className="container">

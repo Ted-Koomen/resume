@@ -1,14 +1,24 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { Layout, BlogBanner } from "../components"
-import './engineeringPost.scss';
+import SEO from "../components/seo";
+import "./engineeringPost.scss"
 
 export default ({ data }) => {
-  const { author, date, title, posttype, description } = data.markdownRemark.frontmatter
+  const {
+    author,
+    date,
+    title,
+    posttype,
+    description,
+    image,
+  } = data.markdownRemark.frontmatter
   const post = data.markdownRemark
+  console.log(image)
   return (
     <Layout>
-      <BlogBanner id="post-banner-description" bannerText={description}/>
+      <SEO title={title} description={description} image={image}/>
+      <BlogBanner id="post-banner-description" bannerText={description} />
       <div id="blog" className="container">
         <div className="blog-content-container">
           <div id="blog-link">
@@ -35,6 +45,15 @@ export const postQuery = graphql`
         tags
         posttype
         description
+        image {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
       }
       html
     }
