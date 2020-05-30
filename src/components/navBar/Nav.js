@@ -9,44 +9,44 @@ const navButtons = [
   {
     url: "https://www.linkedin.com/in/theodoruskoomen/",
     title: "linkedin",
-    id: 1
+    id: 1,
   },
   {
     url: "http://www.github.com/Ted-Koomen",
     title: "github",
-    id: 2
+    id: 2,
   },
   {
     url: "https://twitter.com/Ted_Koomen",
     title: "twitter",
-    id: 3
+    id: 3,
   },
 ]
 
 class Nav extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
 
     this.state = { scrolled: false }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener("scroll", this.handleScroll)
   }
 
   handleScroll = () => {
-    const { pageYOffset } = window;
+    const { pageYOffset } = window
     if (pageYOffset > 240) {
       this.setState({
-        scrolled: true
+        scrolled: true,
       })
     } else {
       this.setState({
-        scrolled: false
+        scrolled: false,
       })
     }
   }
@@ -55,7 +55,7 @@ class Nav extends React.Component {
     if (this.state && this.state.scrolled) {
       return "nav-shadow"
     } else {
-      return ''
+      return ""
     }
   }
 
@@ -66,7 +66,7 @@ class Nav extends React.Component {
       <Element id="top" name="top">
         <nav
           id="nav"
-          className={`navbar navbar-default navbar-fixed-top fixed-top ${this.setDropshadow()}`}
+          className="navbar navbar-default navbar-fixed-top fixed-top"
           role="navigation"
         >
           <div className="container">
@@ -83,13 +83,26 @@ class Nav extends React.Component {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-element scroll-link navbar-brand test"
+                className="nav-element scroll-link navbar-brand"
                 style={{ fontSize: "2.2em" }}
               >
                 Ted Koomen
               </Scroll.Link>
               <div className="social-container">{this.renderSocials()}</div>
             </div>
+            <ul id="nav-link-container" className="nav navbar-nav navbar-right">
+              <li className="nav-link-element">
+                <Link className="nav-element" to="/">
+                  Home
+                </Link>
+              </li>
+
+              <li className="nav-link-element">
+                <Link className="nav-element" to="/blog">
+                  Blog
+                </Link>
+              </li>
+            </ul>
           </div>
         </nav>
       </Element>

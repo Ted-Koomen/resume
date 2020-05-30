@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
     </Helmet>
     <NavBar />
     <main className="main">{ children }</main>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 )
 

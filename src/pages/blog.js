@@ -6,27 +6,36 @@ const blogInfo = [
   {
     headerIcon: "fa fa-code",
     title: "Engineering",
-    body: "Developer tutorials and that I am personally intersted in. This includes JavaSript, Elixir, and React.",
+    body:
+      "Developer tutorials and that I am personally intersted in. This includes JavaSript, Elixir, and React.",
+    disabled: false
   },
   {
     headerIcon: "fa fa-briefcase",
     title: "Career",
-    body: "News about new"
+    body: "Posts comming soon",
+    disabled: true
   },
   {
     headerIcon: "fa fa-book",
     title: "Miscellanious",
-    body: "Endless ramblings about nothing"
-  }
+    body: "Posts comming soon",
+    disabled: true
+  },
 ]
 
 const Blog = () => (
   <Layout>
-    <BlogBanner />
-    <div className="container blog-card-container">
-      {blogInfo.map(blogObject => (
-        <BlogCard {...blogObject} path="blog/engineering" />
-      ))}
+    <BlogBanner id='post-banner-description' bannerText="Look at all these blogs" />
+    <div className="blog-info container" style={{display: 'block'}}>
+      <div className="blog-card-container">
+        {blogInfo.map(blogObject => (
+          <BlogCard {...blogObject} path="blog/engineering" />
+        ))}
+      </div>
+
+      <div className="blogs-description" style={{marginTop: '50px'}}> 
+      </div>
     </div>
   </Layout>
 )

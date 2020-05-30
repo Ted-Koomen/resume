@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import "./blogCard.scss"
 
-export default ({ headerIcon, title, body, path,subText }) => (
+export default ({ headerIcon, title, body, path,subText, disabled }) => (
   <div className="card blog-card">
     <Link to={path} style={{ textDecoration: "none" }}>
       <div className="card-body">

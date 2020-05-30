@@ -22,7 +22,7 @@ const AboutMe = () => (
           <p>
             I love building things. While hard engineering problems are often
             intrinsically fun to tackle, I'm most attracted to solving real
-            customer problems with a business justification. reviously I worked in the Finance and Insurance industry, and I try to incorporate my background in these industries to give users well-rounded, immersive experiences. 
+            customer problems with a business justification. Previously I worked in the Finance and Insurance industry, and I try to incorporate my background in these industries to give users well-rounded, immersive experiences. 
           </p>
           <p>
             I am eager to join teams that are building meaningful products and value a collaborative culture with an emphasis on continuous learning.
@@ -33,7 +33,13 @@ const AboutMe = () => (
           <ul style={{paddingLeft: '100px'}}>
             <li>
               Engineered ordering capabilities for COVID-19 test for the State
-              of Connecticut at a rate of ten thousand tests per day
+              of Connecticut at a rate of ten thousand tests per day.
+            </li>
+            <li>
+              Decreased page load time of largest genetic testing provider by 87.5%
+            </li>
+            <li>
+              Lead team of engineers in revamping front end framework of a multi-billion dollar company
             </li>
           </ul>
         </div>

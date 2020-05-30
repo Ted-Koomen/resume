@@ -14,7 +14,7 @@ const Resume = () => {
       contributions: [
         "Lead team of engineer in developing COVID-19 test ordering capabilities",
         "Lead team of engineers in upgrading platform to a React based ecosystem.",
-        "Lead team of engineers in breaking up Rails monolith into Elixir /Phoenix and Node microservices.",
+        "Lead team of engineers in breaking up Rails monolith into Elixir / Phoenix and Node microservices.",
         "Spearheaded initiative for company wide style guide and best practices for React applications",
         "Participated in company sponsored Tech Talks on Elixir / Phoenix microservices."
       ],

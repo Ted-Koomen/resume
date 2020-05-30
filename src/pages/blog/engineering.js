@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, BlogCard, BlogBanner } from "../../components/"
+import { Layout, BlogCard, BlogBanner, FeaturedCard } from "../../components/"
 
 
 
@@ -9,21 +9,21 @@ export default ({ data }) => {
 
   return (
     <Layout>
-    <BlogBanner />
+    <BlogBanner id="post-banner-description" bannerText="Software Engineering" />
     <div className="container blog-card-container">
       {
        posts.map(post => {
-         const {date, path } = post.node.frontmatter
+         const {date, path, author, title, posttype, description } = post.node.frontmatter
+         console.log("DESCRIPTION: ", description)
          return (
            <>
-            <i className="fa fa-js-square" style={{fontSize: "24px"}} />
-           <BlogCard
-            title="Test"
+
+           <FeaturedCard
+            title={title}
             headerIcon="fa fa-js-square"
-            body="A tutorial covering the basics of starting your own Gatsby blog."
+            body={description}
             subText={date}
             path={path}
-
           />
           </>
          )
@@ -46,6 +46,8 @@ export const AllEngineeringBlogsQuery = graphql`
           author
           path
           posttype
+          featured
+          description
         }
       }
     }

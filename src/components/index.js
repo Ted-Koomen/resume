@@ -7,5 +7,6 @@ import BlogBanner from './blogBanner';
 import BlogCard from './blogCard';
 import Spacer from './spacer'
 import Footer from './footer'
+import FeaturedCard from './featuredCard'
 
-export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, Spacer, BlogCard, Footer }
+export { AboutMe, Hero, ResumeContainer, Layout, NavBar, BlogBanner, Spacer, BlogCard, Footer, FeaturedCard }

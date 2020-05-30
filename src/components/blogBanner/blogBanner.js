@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import './blogBanner.scss';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -12,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ src }) => {
+const Image = ({ id, src, bannerText }) => {
   useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "blog-banner.webp" }) {
@@ -28,10 +29,10 @@ const Image = ({ src }) => {
   return (
    <header style={{minHeight: '554px'}}>
       <div className="container">
-        <div className="row">
+        <div className="row" id={id}>
           <div className="col-lg-12">
             <div className="intro-text">
-              <span className="name">Ted Koomen</span>
+              <span className="name">{bannerText}</span>
               <hr />
             </div>
           </div>

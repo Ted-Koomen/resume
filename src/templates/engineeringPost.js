@@ -1,19 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { Layout, BlogBanner } from "../components"
+import './engineeringPost.scss';
 
 export default ({ data }) => {
-  const { author, date, title } = data.markdownRemark.frontmatter
-  const post = data.markdownRemark;
-
+  const { author, date, title, posttype, description } = data.markdownRemark.frontmatter
+  const post = data.markdownRemark
   return (
-  <Layout>
-      <BlogBanner />
-      <div className="container">
-        <h1>{author}</h1>
-        <h2>{title}</h2>
-        <h3>{date}</h3>
-        <div dangerouslySetInnerHTML={{__html: post.html}} />
+    <Layout>
+      <BlogBanner id="post-banner-description" bannerText={description}/>
+      <div id="blog" className="container">
+        <div className="blog-content-container">
+          <div id="blog-link">
+            <Link to={`/blog/${posttype}`}>{posttype}</Link>
+          </div>
+          <h1 className="blog-title">{title}</h1>
+          <div id="blog-content" className="container">
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </div>
       </div>
     </Layout>
   )
@@ -27,6 +32,9 @@ export const postQuery = graphql`
         date
         title
         path
+        tags
+        posttype
+        description
       }
       html
     }
