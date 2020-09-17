@@ -1,6 +1,6 @@
 .blog-card {
   border: none !important;
-  margin: 20px 20px 20px 20px;
+  padding: 0 0 0 0 !important;
 }
 
 .post-info {
@@ -13,16 +13,18 @@
 
   .post-type-engineering {
     color: #c3a6df !important;
+    font-weight: bold;
   }
 
   .post-type-career {
-    color: #4D9BF2;
+    font-weight: bold;
+    color: #4d9bf2;
   }
 
   .post-type-miscellanious {
-    color: #5954B9;
+    font-weight: bold;
+    color: #5954b9;
   }
-
 
   .card-body {
     padding: 0 !important;
@@ -38,5 +40,23 @@
     font-weight: 300;
     opacity: 0.5;
     margin-top: 8px;
+  }
+}
+
+.disable::hover {
+  cursor: default !important;
+  a {
+    cursor: default !important
+  }
+}
+
+
+.single-card-container {
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 }
