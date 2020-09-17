@@ -1,0 +1,42 @@
+.blog-card {
+  border: none !important;
+  margin: 20px 20px 20px 20px;
+}
+
+.post-info {
+  margin-top: 10px;
+  .post-type {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .post-type-engineering {
+    color: #c3a6df !important;
+  }
+
+  .post-type-career {
+    color: #4D9BF2;
+  }
+
+  .post-type-miscellanious {
+    color: #5954B9;
+  }
+
+
+  .card-body {
+    padding: 0 !important;
+    font-size: 20px;
+  }
+
+  .card-title {
+    margin-bottom: 8px;
+  }
+
+  .post-date {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+    margin-top: 8px;
+  }
+}

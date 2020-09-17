@@ -1,0 +1,29 @@
+#header {
+  padding-top: 49px;
+  padding-right: 7%;
+  padding-left: 7%;
+  background: #010001 !important;
+  
+  #header-brand {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFF;
+  }
+
+  .header-link {
+    opacity: 0.5;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .navbar-toggler-icon {
+    color: #FFF;
+  }
+
+  .navbar-toggler {
+    background: white !important;
+  }
+}

@@ -1,0 +1,1 @@
+export const BLACK_BACKGROUND = "#010001"
