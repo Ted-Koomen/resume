@@ -23,7 +23,7 @@ export default ({ data }) => {
               <div className={`post-type post-type-${posttype}`}>
                 {posttype}
               </div>
-              <p style={{fontWeight: "bold", fontSize: "32px"}}>{description}</p>     
+              <p style={{fontWeight: "bold", fontSize: "32px", maxWidth: "550px"}}>{description}</p>     
               <div>
                 <p style={{fontSize: '16px', fontWeight: "300"}}>{snippet}</p>
               </div>
