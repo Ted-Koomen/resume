@@ -4,8 +4,44 @@
   padding-left: 7%;
 }
 
+.header {
+  background: #010001 !important;
+  #header-brand {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    .link {
+      color: #fff;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      .link:hover {
+        color: #fff !important;
+        text-decoration: underline;
+      }
+
+      .header-link {
+        opacity: 0.5;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+
+        .link {
+          color: #fff;
+        }
+      }
+    }
+
+  }
+  .navbar-toggler {
+    background: #FFF !important
+  }
+}
+
 .header-white {
-  background: #fff !important;
   #header-brand {
     text-transform: uppercase;
     font-weight: bold;
@@ -13,68 +49,7 @@
     color: #010001 !important;
 
     .link {
-      color: #010001
-    }
-  }
-
-  .header-link {
-    opacity: 0.5;
-    color: #010001;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
-
-    .link {
       color: #010001;
     }
   }
-
-  .navbar-toggler-icon {
-    color: #010001;
-  }
-
-  .navbar-toggler {
-  }
 }
-
-.header {
-  background: #010001 !important;
-
-  #header-brand {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 24px;
-    .link {
-      color: #fff
-    }
-  }
-
-  .header-link {
-    opacity: 0.5;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
-
-    .link {
-      color: #fff
-    }
-  }
-
-  .navbar-toggler-icon {
-    color: #fff;
-  }
-
-  .navbar-toggler {
-    background: white !important;
-  }
-}
-
-// .link {
-//   color: #fff;
-//   text-transform: uppercase;
-//   text-decoration: none !important;
-// }
-
-// .link:hover {
-//   color: #fff;
-// }

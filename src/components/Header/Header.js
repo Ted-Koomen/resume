@@ -19,28 +19,14 @@ const Header = ({ path, white }) => {
     },
   };
 
-  const isActive = (routePath) => {
-    console.log("PATH: ", path)
-    console.log("ROUTE PATH: ", routePath)
-    console.log(path === routePath)
-    if (path === routePath) {
-      return "active";
-    } else {
-      return "";
-    }
-  };
-
   const renderNavLinks = () =>
     Object.keys(links).map((key) => (
-      <Nav.Link active className="header-link">
         <Link
-        active
-          className={`link ${isActive(links[key].path)}`}
+          className={`link nav-link header-link`}
           to={links[key].path}
         >
           {links[key].text}
         </Link>
-      </Nav.Link>
     ));
 
   return (

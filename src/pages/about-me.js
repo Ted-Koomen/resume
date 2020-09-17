@@ -9,7 +9,7 @@ import Img from "gatsby-image";
 
 const AboutMePage = ({ data, path }) => (
   <Layout path={path}>
-    <Hero height="1400px" style={{paddingTop: '10%' }} background={BLACK_BACKGROUND}>
+    <Hero height="1400px" style={{overflowX: 'hidden', paddingTop: '10%' }} background={BLACK_BACKGROUND}>
       <div
         className="row responsive-margins"
         style={{
