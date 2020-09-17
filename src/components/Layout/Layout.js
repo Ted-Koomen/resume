@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../Header/Header'
 import './layout.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path,navWhite }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="wrapper" style={{margin: 'auto', marginBottom: '-50px'}}>
-        <Header />
+        <Header white={navWhite ? true : false } path={path}/>
         <main>{children}</main>
       </div>
     </>

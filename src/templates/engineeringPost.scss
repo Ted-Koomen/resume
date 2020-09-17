@@ -1,0 +1,44 @@
+.container {
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.post-type {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.post-type-engineering {
+  color: #c3a6df !important;
+  font-weight: bold;
+}
+
+.post-type-career {
+  font-weight: bold;
+  color: #4d9bf2;
+}
+
+.post-type-miscellanious {
+  color: #5954b9;
+}
+
+.post-date {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+h2 {
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Proxima Nova W05 Regular" !important;
+}
+
+h3 {
+  margin-top: 50px;
+  font-weight: 700;
+}

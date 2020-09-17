@@ -10,10 +10,11 @@ image: '../../images/engineering-post.png'
 tags: ["javascript", "gatsby", "react"]
 featured: true
 test: false
----	---
+snippet: 'The Creators of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps".' 
+---
 
 
-Here is my main content	[The Creators](https://www.gatsbyjs.org/) of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps". So what does that even mean? It seems as though every framework or library claims to be blazing fast and scalable. What Gatsby is, is a *Static Site Generator*. Great, so what is that?
+[The Creators](https://www.gatsbyjs.org/) of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps". So what does that even mean? It seems as though every framework or library claims to be blazing fast and scalable. What Gatsby is, is a *Static Site Generator*. Great, so what is that?
 It is very interesting.	
 A static site generator is what it sounds like, static, fixed, not changing. In more clear terms, it means that all the content that a user could see on the web page is already created. A dynamic website will generate a page on the fly and then serve that page to the user. This data is stored somewhere in a database, is then accessed, that data is filled into a template, and then given to the user. Dynamic websites are great, but there are tradeoffs, such as security, and potential performance issues.
 
@@ -27,7 +28,7 @@ Partly in thanks to being extremely feature rich, Gatsby has a pretty high learn
 If you already know GraphQL, accessing data from whatever datasource you are using feels intuitive. If you don't know GraphQL, then that is another thing to learn, which has its own learningcurve and may seem daunting.
 
 
-### Building Your Blog
+## Building Your Blog
 
 #### Install Gatsby CLI
 If it isn't obvious, if you don't already have it, the first thing you want to do is to install the gatsby-cli, and make sure you have [Node](http://www.nodejs.org) and [Git](https://www.atlassian.com/git/tutorials/install-git#mac-os-x) installed globally. After having these dependencies, you can go ahead and run:
@@ -89,11 +90,11 @@ There are four imporant files for a Gatsby site:
 `gatsby-browser.js` - Gatsby brownser API for customizing default browser settings
 `gatsby-ssr.js` - Gatsby server-side rendering customizations
 
-### Okay thats great, how do I actually use these tools?
+## Okay thats great, how do I actually use these tools?
 Gatsby will automatically create pages from the React components in `src/pages` into pages with URL addresses. For example, `index.js` would route to `localhost:8000/` and `about.js` would route to `localhost:8000/about`. Under the hood, Gatsby uses [React Router](https://reacttraining.com/react-router/) to handle browser history.
 
 
-#### Blogs
+### Blogs
 Now lets add some blogs!
 
 ##### Adding Blog Posts
@@ -210,7 +211,14 @@ My query is the following (it may look different, it is the query that brought y
 ```jsx
 export const AllEngineeringBlogsQuery = graphql`
   query AllEngineeringPosts {
-   allMarkdownRemark(filter: {frontmatter: {posttype: {eq: "engineering"}}}) {
+   allMarkdownRemark(filter: {
+     frontmatter: {
+       posttype: {
+         eq: "engineering"
+        }
+      }
+    }
+    ) {
     edges {
       node {
         frontmatter {
@@ -256,7 +264,13 @@ Create a new file called `Post.js`
   // Post.js
 import React from "react";
 import { Link } from "gatsby";
-const Post = ({ title, author, date, description, path }) => (
+const Post = ({ 
+  title, 
+  author, 
+  date, 
+  description, 
+  path 
+  }) => (
   <div className="post">
     <h3 className="post-title">{ title }</h3>
     <p className="post-description">{ description }</p>

@@ -41,11 +41,11 @@
       format("woff");
 }
 
-body {
+body, p, h1, div {
   font-family: "Proxima Nova W05 Regular";
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
+
+
 
 html, body {
   height: 100%;

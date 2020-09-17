@@ -1,35 +1,64 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 // import { Layout, BlogBanner } from "../components"
+import Layout from "../components/Layout/Layout";
+import Hero from '../components/Hero/Hero';
+import moment from 'moment';
+import Img from 'gatsby-image';
+import './engineeringPost.scss'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export default ({ data }) => {
-  const { author, date, title } = data.markdownRemark.frontmatter
+  const { author, date, title, description, posttype, snippet, image } = data.markdownRemark.frontmatter
   const post = data.markdownRemark;
-
   return (
-    <div>
-      
-    </div>
-  // <Layout>
-  //     <BlogBanner />
-  //     <div className="container">
-  //       <h1>{author}</h1>
-  //       <h2>{title}</h2>
-  //       <h3>{date}</h3>
-  //       <div dangerouslySetInnerHTML={{__html: post.html}} />
-  //     </div>
-  //   </Layout>
-  )
-}
+    <Layout navWhite>
+      <Hero background="#FFF">
+        <div className="container">
+          <div style={{
+            marginTop: "10%",
+            marginBottom: "10%"
+          }}>
+              <div className={`post-type post-type-${posttype}`}>
+                {posttype}
+              </div>
+              <p style={{fontWeight: "bold", fontSize: "32px"}}>{description}</p>     
+              <div>
+                <p style={{fontSize: '16px', fontWeight: "300"}}>{snippet}</p>
+              </div>
+              <div className="post-date">{moment(date).format('MMMM DD, YYYY')}</div>
+          </div>
+        </div>
+      </Hero>
+      <Img fluid={image.childImageSharp.fluid} style={{maxHeight: "500px", marginBottom: "50px"}} />
+      <div className="container">
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
+    </Layout>
+  );
+};
 
 export const postQuery = graphql`
   query EngineeringPost($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         author
-        date
-        title
-        path
+          description
+          featured
+          path
+          posttype
+          tags
+          title
+          date
+          snippet
+          image {
+            childImageSharp {
+              fluid(quality: 100) {
+               ...GatsbyImageSharpFluid
+              }
+            }
+          }
       }
       html
     }
