@@ -24,7 +24,7 @@ export default ({ data }) => {
                 {posttype}
               </div>
               <p style={{fontWeight: "bold", fontSize: "32px"}}>{description}</p>     
-              <div>
+              <div style={{maxWidth: "550px"}}>
                 <p style={{fontSize: '16px', fontWeight: "300"}}>{snippet}</p>
               </div>
               <div className="post-date">{moment(date).format('MMMM DD, YYYY')}</div>
