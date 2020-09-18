@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import ReactGA from 'react-ga'
 import Hero from "../components/Hero/Hero";
 import SEO from "../components/seo";
 import Layout from "../components/Layout/Layout";
@@ -8,8 +9,10 @@ import { BLACK_BACKGROUND } from "../constants/index";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
+  ReactGA.initialize('UA-168019975-1')
+  ReactGA.pageview(location.pathname + window.location.search);
   return (
     <Layout>
       <SEO title="Home" />
