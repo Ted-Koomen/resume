@@ -9,10 +9,6 @@ const Header = ({ path, white }) => {
       path: "/about-me/",
       text: "About Me",
     },
-    blog: {
-      path: "/blog/",
-      text: "Blog",
-    },
     resume: {
       path: "/resume/",
       text: "Resume",
@@ -24,6 +20,7 @@ const Header = ({ path, white }) => {
         <Link
           className={`link nav-link header-link`}
           to={links[key].path}
+          key={links[key].path}
         >
           {links[key].text}
         </Link>
@@ -31,13 +28,13 @@ const Header = ({ path, white }) => {
 
   return (
     <Navbar id="header" className={white ? "header-white" : "header"} expand="lg">
-      <Navbar.Brand className="text-left" id="header-brand" href="#home">
+      <div className="text-left navbar-brand text-left" id="header-brand" href="#home">
         <Link className="link" to="/">
           Ted Koomen
         </Link>
-      </Navbar.Brand>
+      </div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse inline id="basic-navbar-nav" className="text-right">
+      <Navbar.Collapse id="basic-navbar-nav" className="text-right">
         <Nav className="ml-auto">{renderNavLinks()}</Nav>
       </Navbar.Collapse>
     </Navbar>

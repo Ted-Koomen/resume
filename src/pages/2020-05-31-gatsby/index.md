@@ -11,6 +11,7 @@ tags: ["javascript", "gatsby", "react"]
 featured: true
 test: false
 snippet: 'The Creators of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps".' 
+featuredImage: '../../images/engineering-post.png'
 ---
 
 

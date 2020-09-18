@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Hero from "../components/Hero/Hero";
+import SEO from "../components/seo";
 import Layout from "../components/Layout/Layout";
 import CardContainer from "../components/CardContainer/CardContainer"
 import { BLACK_BACKGROUND } from "../constants/index";
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <Hero height="450px" background={BLACK_BACKGROUND}>
         <div
           style={{ paddingLeft: "7%", paddingRight: "7%", paddingTop: "70px" }}
@@ -32,7 +34,7 @@ const IndexPage = ({ data }) => {
 
 export const allPostsQuery = graphql`
   query AllFeaturedPosts {
-    allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}}}) {
+    allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}}}, sort: { fields: [frontmatter___date], order: DESC }) {
     edges {
       node {
         frontmatter {
@@ -46,6 +48,11 @@ export const allPostsQuery = graphql`
           date
           image {
             relativePath
+            childImageSharp {
+              fluid(quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }

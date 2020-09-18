@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import Img from 'gatsby-image';
 import { Link } from 'gatsby'
 import "./card.scss";
 import moment from 'moment';
@@ -8,12 +8,9 @@ export default ({ data }) => {
   const {
     node: {
       frontmatter: {
-        author,
         description,
-        featured,
-        image: { relativePath },
+        image: { childImageSharp },
         posttype,
-        title,
         date,
         path
       },
@@ -31,11 +28,7 @@ export default ({ data }) => {
     <div className="single-card-container" style={{width: "362px", margin: "0px 20px 0px 20px" }}>
       <Link to={path}>
       <div className="col-md-12 blog-card">
-        <img
-          className="card-img-top"
-          style={{ height: "300px", width: "362px" }}
-          src={require(`../../images/${posttype}-post.png`)}
-        />
+        <Img fluid={childImageSharp.fluid} style={{ height: "300px", width: "362px" }} />
         <div style={{maxWidth: "100%" }} className="post-info">
           <div className={`card-title post-type post-type-${posttype}`}>
             {posttype}

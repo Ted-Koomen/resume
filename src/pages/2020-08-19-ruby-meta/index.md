@@ -1,15 +1,16 @@
 ---
 path: '/blog/engineering/metaprogramming-ruby'
-date: '2020-09-17'
+date: '2020-09-18'
 title: 'Metaprogramming in Ruby Part I'
 author: 'Ted Koomen'
-description: 'What is metaprogramming and why does it remind me of the cuttlefish?'
+description: 'Metaprogramming and its relation to the cuttlefish.'
 posttype: 'engineering'
 tag: ["ruby", "ruby on rails", "metaprogramming"]
 featured: true
-image: '../../images/ruby-banner.jpg'
+image: '../../images/ruby-banner.png'
 snippet: "So now how do you treat programs as data, and why would you do that? 
 If you have worked in Rails you have been using many methods that are a result of metaprogramming."
+featuredImage: '../../images/ruby-banner.png'
 ---
 
 You may be asking yourself "why is there a cuttlefish with a ruby hanging off of its head" or "what does this have to do with metaprogramming at all?".

@@ -2,13 +2,14 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import { BLACK_BACKGROUND } from "../constants";
-import aboutMeImage from "../images/professional.jpg";
+import Seo from '../components/seo';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const AboutMePage = ({ data, path }) => (
   <Layout path={path}>
+    <Seo title='About Me' />
     <Hero height="1400px" style={{overflowX: 'hidden', paddingTop: '10%' }} background={BLACK_BACKGROUND}>
       <div
         className="row responsive-margins"

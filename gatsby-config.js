@@ -1,13 +1,48 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.tedkoomen.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Ted Koomen`,
+    description: `Ted Koomen's personal blog and portfolio.`,
+    author: `Ted Koomen`,
+    siteUrl: "https://www.tedkoomen.com",
+    url: "https://www.tedkoomen.com",
+    image: "/images/professional.jpg",
+    twitterUsername: "@ted_koomen",
+    keywords: ["software engineering"]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-transformer-sharp',
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      }, 
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

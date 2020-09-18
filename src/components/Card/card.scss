@@ -43,6 +43,7 @@
   }
 }
 
+
 .disable::hover {
   cursor: default !important;
   a {
@@ -52,6 +53,11 @@
 
 
 .single-card-container {
+
+  @media (max-width: 900px) {
+    margin-bottom: 40px !important;
+  }
+
   a {
     color: inherit;
   }

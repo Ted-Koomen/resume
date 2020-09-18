@@ -3,19 +3,28 @@ import { graphql } from "gatsby";
 // import { Layout, BlogBanner } from "../components"
 import Layout from "../components/Layout/Layout";
 import Hero from '../components/Hero/Hero';
+import Seo from '../components/seo';
 import moment from 'moment';
 import Img from 'gatsby-image';
 import './engineeringPost.scss'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-export default ({ data }) => {
-  const { author, date, title, description, posttype, snippet, image } = data.markdownRemark.frontmatter
+export default ({ data, location }) => {
+  const { date, title, description, posttype, snippet, image, featuredImage } = data.markdownRemark.frontmatter
   const post = data.markdownRemark;
+  const seoImage = featuredImage.childImageSharp.resize
+
   return (
     <Layout navWhite>
+      <Seo
+        title={title}
+        description={description}
+        pathname={location.pathname}
+        image={seoImage}
+      />
       <Hero background="#FFF">
-        <div className="container" style={{maxWidth: '600px !important'}}>
+        <div className="container">
           <div style={{
             marginTop: "10%",
             marginBottom: "10%"
@@ -56,6 +65,15 @@ export const postQuery = graphql`
             childImageSharp {
               fluid(quality: 90) {
                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          featuredImage {
+            childImageSharp{
+              resize(width: 1200) {
+                src
+                height
+                width
               }
             }
           }
