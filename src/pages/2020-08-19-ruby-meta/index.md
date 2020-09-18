@@ -8,8 +8,7 @@ posttype: 'engineering'
 tag: ["ruby", "ruby on rails", "metaprogramming"]
 featured: true
 image: '../../images/ruby-banner.png'
-snippet: "So now how do you treat programs as data, and why would you do that? 
-If you have worked in Rails you have been using many methods that are a result of metaprogramming."
+snippet: "If you have worked in Ruby on Rails you have been using many methods that are a result of metaprogramming!"
 featuredImage: 'images/ruby-banner.png'
 ---
 
