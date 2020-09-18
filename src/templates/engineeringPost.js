@@ -11,12 +11,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export default ({ data, location }) => {
-  const { date, title, description, posttype, snippet, image, featuredImage } = data.markdownRemark.frontmatter
+  const { date, title, description, posttype, featured, snippet, image, featuredImage } = data.markdownRemark.frontmatter
   const post = data.markdownRemark;
   const seoImage = featuredImage.childImageSharp.resize
-
   return (
     <Layout navWhite>
+      { console.log(seoImage) }
       <Seo
         title={title}
         description={description}
