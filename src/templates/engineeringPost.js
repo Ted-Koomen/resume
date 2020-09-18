@@ -1,5 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
+import ReactGA from 'react-ga'
+
 // import { Layout, BlogBanner } from "../components"
 import Layout from "../components/Layout/Layout";
 import Hero from '../components/Hero/Hero';
@@ -14,6 +16,8 @@ export default ({ data, location }) => {
   const { date, title, description, posttype, featured, snippet, image, featuredImage, author } = data.markdownRemark.frontmatter
   const post = data.markdownRemark;
   const seoImage = featuredImage.childImageSharp.resize
+  ReactGA.initialize('UA-168019975-1')
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <Layout navWhite>
       { console.log(seoImage) }
