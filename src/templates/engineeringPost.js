@@ -31,7 +31,7 @@ export default ({ data }) => {
           </div>
         </div>
       </Hero>
-      <Img fluid={image.childImageSharp.fluid} style={{maxHeight: "500px", marginBottom: "50px"}} />
+      <Img fluid={image.childImageSharp.fluid} style={{maxHeight: "500px", marginBottom: "50px", minHeight: '500px'}} />
       <div className="container">
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
@@ -54,7 +54,7 @@ export const postQuery = graphql`
           snippet
           image {
             childImageSharp {
-              fluid(quality: 100) {
+              fluid(quality: 90) {
                ...GatsbyImageSharpFluid
               }
             }
