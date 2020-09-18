@@ -1,5 +1,4 @@
 import React from "react";
-import ReactGA from "react-ga";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import { BLACK_BACKGROUND } from "../constants";
@@ -9,8 +8,6 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const AboutMePage = ({ data, path }) => {
-  ReactGA.initialize("UA-168019975-1");
-  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <Layout path={path}>
       <Seo title="About Me" />

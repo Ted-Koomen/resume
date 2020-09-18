@@ -9,7 +9,6 @@ import process from "process";
 import React from "react";
 import PropTypes from "prop-types";
 import Header from "../Header/Header";
-import { Helmet } from "react-helmet";
 import "./layout.scss";
 
 const Layout = ({ children, path, navWhite }) => {
