@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import { BLACK_BACKGROUND } from "../constants";
@@ -7,7 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
-const AboutMePage = ({ data, path }) => {
+const AboutMePage = ({ data, path, location }) => {
+  ReactGA.initialize("UA-168019975-1");
+  ReactGA.pageview(location.pathname);
   return (
     <Layout path={path}>
       <Seo title="About Me" />
