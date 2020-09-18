@@ -8,6 +8,8 @@ posttype: 'engineering'
 tag: ["ruby", "ruby on rails", "metaprogramming"]
 featured: true
 image: '../../images/ruby-banner.jpg'
+snippet: "So now how do you treat programs as data, and why would you do that? 
+If you have worked in Rails you have been using many methods that are a result of metaprogramming."
 ---
 
 You may be asking yourself "why is there a cuttlefish with a ruby hanging off of its head" or "what does this have to do with metaprogramming at all?".
