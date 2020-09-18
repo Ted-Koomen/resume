@@ -14,7 +14,7 @@ const CardContainer = ({ containerTitle, data }) => {
 
   const renderCards = () => {
     return data.map((obj) => {
-      return <Card data={obj} />;
+      return <Card data={obj} key={obj.node.frontmatter.path} />;
     });
   };
 

@@ -13,7 +13,7 @@ const Resume = () => (
           A cooler looking resume is comming soon. 
         </h1>
         <h1 style={{marginBottom: "50px"}}>Click below for a pdf version.</h1>
-        <a href='https://personalsite-koomen.imfast.io/ted_koomen_resume.pdf' target="_blank">
+        <a href='https://personalsite-koomen.imfast.io/ted_koomen_resume.pdf' rel="noreferrer" target="_blank">
           résumé
         </a>
       </Hero>
