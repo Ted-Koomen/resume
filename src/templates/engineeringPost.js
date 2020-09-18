@@ -15,7 +15,7 @@ export default ({ data }) => {
   return (
     <Layout navWhite>
       <Hero background="#FFF">
-        <div className="container">
+        <div className="container" style={{maxWidth: '600px'}}>
           <div style={{
             marginTop: "10%",
             marginBottom: "10%"
