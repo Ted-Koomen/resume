@@ -11,12 +11,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export default ({ data, location }) => {
-  const { date, title, description, posttype, snippet, image, featuredImage } = data.markdownRemark.frontmatter
+  const { date, title, description, posttype, featured, snippet, image, featuredImage, author } = data.markdownRemark.frontmatter
   const post = data.markdownRemark;
   const seoImage = featuredImage.childImageSharp.resize
-
   return (
     <Layout navWhite>
+      { console.log(seoImage) }
       <Seo
         title={title}
         description={description}
@@ -37,6 +37,8 @@ export default ({ data, location }) => {
                 <p style={{fontSize: '16px', fontWeight: "300"}}>{snippet}</p>
               </div>
               <div className="post-date">{moment(date).format('MMMM DD, YYYY')}</div>
+              <div className="post-date">{author}</div>
+              <a href="https://twitter.com/Ted_Koomen?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Ted_Koomen</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </div>
       </Hero>

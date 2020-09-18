@@ -15,9 +15,9 @@ featuredImage: '../../images/engineering-post.png'
 ---
 
 
-[The Creators](https://www.gatsbyjs.org/) of Gatsby describe their product as "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps". So what does that even mean? It seems as though every framework or library claims to be blazing fast and scalable. What Gatsby is, is a *Static Site Generator*. Great, so what is that?
-It is very interesting.	
-A static site generator is what it sounds like, static, fixed, not changing. In more clear terms, it means that all the content that a user could see on the web page is already created. A dynamic website will generate a page on the fly and then serve that page to the user. This data is stored somewhere in a database, is then accessed, that data is filled into a template, and then given to the user. Dynamic websites are great, but there are tradeoffs, such as security, and potential performance issues.
+[The Creators](https://www.gatsbyjs.org/) of Gatsby describe their product as "a free and open source framework based on React that helps developers build blazing fast websites and apps". So what does that even mean? It seems as though every framework or library claims to be blazing fast and scalable. What Gatsby is, is a *Static Site Generator*. Great, so what is that?
+
+A static site generator is what it sounds like, static, fixed, not changing. In more clear terms, it means that all the content that a user could see on the web page is already created. A dynamic website will generate a page on the fly and then serve that page to the user. Page data is stored somewhere in a database, is then accessed, that data is filled into a template, and then served to the user. Dynamic websites are great, but there are tradeoffs, such as security, and potential performance issues.
 
 As stated before, Gatsby is a static site generator, but it does things slightly differently. Gatsby utilizes [React](https://reactjs.org/), as apposed to something like [Jekyll](https://jekyllrb.com/) which is Ruby based. What Gatsby has that Jekyll doesn't is that Gatsby generates Progressive Web Apps. This allows Gatsby to have great SEO, and what I find most convenient, allow for offline usage. I chose Gatsby not for those reasons, but their extensive list of [plugins](https://www.gatsbyjs.org/plugins/), which allow for using styled components, image processing, markdown rendering, and so much more.
 
@@ -26,7 +26,7 @@ After all of that, lets get into a simple set-up.
 ## The worst part about Gatsby is the learning curve
 Partly in thanks to being extremely feature rich, Gatsby has a pretty high learning curve and set up time as compared to its Ruby counterpart Jekyll. Like many static websites, we need to use an external data source during the build process. Gatsby provides support for many forms of data including CMSs (WordPress, Contentul), APIs, and Markdown. To be able access this data, Gatsby uses GraphQL. 
 
-If you already know GraphQL, accessing data from whatever datasource you are using feels intuitive. If you don't know GraphQL, then that is another thing to learn, which has its own learningcurve and may seem daunting.
+If you already know GraphQL, accessing data from whatever data source you are using feels intuitive. If you don't know GraphQL, then that is another thing to learn, which has its own learning curve and may seem daunting.
 
 
 ## Building Your Blog
@@ -50,7 +50,7 @@ After the above code is executed, you can go ahead and create your first gatsby 
   gatsby develop
 ```
 
-After these steps, you can goahead an see what Gatsby gives you out of the box. Navigate to `localhost:8000` and you should see a landing page build for you by gatsby. 
+After these steps, you can go ahead an see what Gatsby gives you out of the box. Navigate to `localhost:8000` and you should see a landing page build for you by gatsby. 
 
 #### Gatsby Folder Architecture
 Gatsby builds a folder structure very similar to what any developer could be sued to. Here is the folder structure that we have to work with:
@@ -84,7 +84,7 @@ Gatsby builds a folder structure very similar to what any developer could be sue
   yarn.lock
 ```
 
-There are four imporant files for a Gatsby site:
+There are four important files for a Gatsby site:
 
 `gatsby-config.js` - configure options and plugins for Gatsby
 `gatsby-node.js` - Gatsby Node.js API for customizing the build process
@@ -92,11 +92,11 @@ There are four imporant files for a Gatsby site:
 `gatsby-ssr.js` - Gatsby server-side rendering customizations
 
 ## Okay thats great, how do I actually use these tools?
-Gatsby will automatically create pages from the React components in `src/pages` into pages with URL addresses. For example, `index.js` would route to `localhost:8000/` and `about.js` would route to `localhost:8000/about`. Under the hood, Gatsby uses [React Router](https://reacttraining.com/react-router/) to handle browser history.
+Gatsby will automatically create pages from React components in `src/pages` into pages with URL addresses. For example, `index.js` would route to `localhost:8000/` and `about.js` would route to `localhost:8000/about`. Under the hood, Gatsby uses [React Router](https://reacttraining.com/react-router/) to handle browser history.
 
 
 ### Blogs
-Now lets add some blogs!
+Now let's add some blogs!
 
 ##### Adding Blog Posts
 Inside of the `pages/` directory, create a folder `2020-05-29-first-blog`.
@@ -125,7 +125,7 @@ Everything between the three hyphens is called `frontmatter`. This acts as the m
 - `author`: The blog post author
 - `description`: The description of the blog post
 
-Everything after the closing hyphens are the actuall body of the post.
+Everything after the closing hyphens are the actual body of the post.
 
 ##### Rendering a List of Blog Posts
 Now that we have a blog post we want the whole world to see, we want to render them in our `blog.js` page. First, lets create that page.
@@ -141,7 +141,7 @@ in the `pages/` directory, lets create `blog.js`, and include the following code
   )
 ```
 
-After create this file. We can navigate to `localhost:8000` and see we made our first page!
+After we create this file. We can navigate to `localhost:8000` and see we made our first page!
 
 Now we need to install some new dependencies to actually be able to parse and render our blogs written in markdown.
 
@@ -187,7 +187,7 @@ To retrieve all of our blog posts we will use the `AllMarkdownRemark` plugin. In
   AllMarkdownRemark > edges > node > frontmatter > date title
 ```
 
-Now press the play butten, and you should see the blog post data in the panel on the right.
+Now press the play button, and you should see the blog post data in the panel on the right.
 Next thing to do is copy this GraphQL query, and we will bring it over to `blog.js`
 
 First thing we want to do in `blog.js` is import `graphql` from gatsby
@@ -244,7 +244,7 @@ The next thing we have to do is pass `data` from the query as a parameter to the
   // blog.js
   ...
   const Blog = ({ data }) => (
-    <h1>BLog</h1>
+    <h1>Blog</h1>
   )
 ```
 
@@ -295,7 +295,7 @@ Now in `blog.js` we can import `Post` and render a new post for each post that w
     <>
       <h1>Blog</h1>
       {
-        data.allMarkdownRemart.edges.map(post => {
+        data.allMarkdownRemark.edges.map(post => {
           const {
             title,
             author,
@@ -360,7 +360,7 @@ query BlogPost($path: String!) {
 Now that we have our query, what do we do?
 
 Lets build a template which will determine how each blog post should be structured.
-In the `src/` directory, create a new folder called `templates` anmd add a file called `blogTemplate.js`
+In the `src/` directory, create a new folder called `templates` and add a file called `blogTemplate.js`
 
 Now we need to include some imports
 
@@ -443,7 +443,7 @@ We now have to return a query to get all the blog posts. We already have this qu
 
 Once we receive our data from the query, we want to reject if an error occurred, else create a page for each post.
 
-This will create a post at the path received from the query data, and we will use the `postTemplate` we created to render each post
+This will create a post at the path received from the query data, and we will use the `postTemplate` we created to render each post.
 
 ```js
 // gatsby-node.js
@@ -507,5 +507,5 @@ We should finally be seeing a blog post!!!!
 ## Thoughts on Gatsby
 To just create a simple blog this seems way over engineered and complex. I would have to agree to a certain extent. Where Gatsby shines is not it's set up time, but when you have your site all set up. Gatsby offers incredible performance and configuration, where another product might leave you with great ease of set up, but leave you wanting more in configuration.
 ## Conclusion
-Thats it! I hope I was somewhat clear in making your first Gatsby blog. I have to give credit to [Emma Bostian](https://ultimatecourses.com/blog/building-a-blog-with-gatsby-and-graphql) as this was the blog I followed in creating my Gatsby site. 
+That's it! I hope I was somewhat clear in making your first Gatsby blog. I have to give credit to [Emma Bostian](https://ultimatecourses.com/blog/building-a-blog-with-gatsby-and-graphql) as this was the blog I followed in creating my Gatsby site. 
 Please contact me on Twitter if you have any questions!
