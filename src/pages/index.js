@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const IndexPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
   ReactGA.initialize('UA-168019975-1')
-  ReactGA.pageview(location.pathname + window.location.search);
+  ReactGA.pageview(location.pathname);
   return (
     <Layout>
       <SEO title="Home" />

@@ -16,7 +16,7 @@ export default ({ data, location }) => {
   const post = data.markdownRemark;
   const seoImage = featuredImage.childImageSharp.resize
   ReactGA.initialize('UA-168019975-1')
-  ReactGA.pageview(location.pathname + window.location.search);
+  ReactGA.pageview(location.pathname);
   return (
     <Layout navWhite>
       { console.log(seoImage) }

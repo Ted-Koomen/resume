@@ -10,7 +10,7 @@ import Img from "gatsby-image";
 
 const AboutMePage = ({ data, path, location }) => {
   ReactGA.initialize("UA-168019975-1");
-  ReactGA.pageview(location.pathname + window.location.search);
+  ReactGA.pageview(location.pathname);
   return (
     <Layout path={path}>
       <Seo title="About Me" />
