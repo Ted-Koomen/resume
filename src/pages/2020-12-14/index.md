@@ -7,7 +7,7 @@ description: 'New ES2020 features that will make your life easier'
 posttype: 'engineering'
 tag: ["javascript", "es2020", "es6"]
 image: '../../images/ruby-banner.png'
-featuredImage: '../2020-10-26-ruby-sorting/images/ruby-banner.png'
+featuredImage: '../../images/engineering-post.png'
 featured: true
 snippet: "ES2020 really helps clean up some pretty dirty code. It allows for engineers to code for edgecases which can look"
 ---
