@@ -9,7 +9,7 @@ tag: ["javascript", "es2020", "es6"]
 image: '../../images/engineering-post.png'
 featuredImage: '../../images/engineering-post.png'
 featured: true
-snippet: "ES2020 really helps clean up some pretty dirty code. It allows for engineers to code for edgecases which can look"
+snippet: "ES2020 really helps clean up some pretty dirty code. It allows for engineers to code for edgecases which can look pretty dirty without optional chaning, and allow code to be more performant with dynamic imports."
 ---
 
 It's been a couple of months since ECMAScript 2020 (ES2020) has been released. ES2020 brings in many new features that JavaScript desparately needs. That being said, it has come to the point where current day ECMAScript does not resemble vanilla JavaScript in the slightest. 
@@ -226,5 +226,5 @@ Now we can use the same syntax to export modules:
 export * as utils from './utils.js'
 ```
 # Conclusion
-As you can see, ES2020 really helps clean up some pretty dirty code. It allows for engineers to code for edgecases which can look pretty dirty with optional chaning, and allow code to be more performant with dynamic imports. Next in the series on JavaScript I will review Promises!
+As you can see, ES2020 really helps clean up some pretty dirty code. It allows for engineers to code for edgecases which can look pretty dirty without optional chaning, and allow code to be more performant with dynamic imports. Next in the series on JavaScript I will review Promises!
 
