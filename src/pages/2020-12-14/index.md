@@ -1,7 +1,7 @@
 ---
 path: '/blog/engineering/es2020-features'
 date: '2020-12-14'
-title: "What's new in in JavaScript: ES2020"
+title: "What's new in JavaScript: ES2020"
 author: 'Ted Koomen'
 description: 'New ES2020 features that will make your life easier'
 posttype: 'engineering'
